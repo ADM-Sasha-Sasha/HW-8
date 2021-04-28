@@ -36,22 +36,22 @@ public class Main
         System.out.println(cars);
 
         //MyQueue
+
+        MyQueue<String> phones = new MyQueue<>();
+        phones.add("IPhone");
+        phones.add("Samsung");
+        phones.add("Xiaomi");
+        phones.add("HTC");
+        System.out.println(phones);
+        System.out.println(phones.size());
+
+        phones.remove(3);
+        System.out.println(phones);
+        phones.poll();
+        System.out.println(phones);
+
+
 /*
-        MyQueue<String> vine = new MyQueue<>();
-        vine.add("Merlo");
-        vine.add("Mademoiselle comedie rose");
-        vine.add("Shardone");
-        vine.add("Pino Nuar");
-        System.out.println(vine);
-        System.out.println(vine.size());
-
-        vine.remove(2);
-        System.out.println(vine);
-        vine.poll();
-        System.out.println(vine);
-
-
-
         //MyHashMap
         MyHashMap <Integer, String> fruits = new MyHashMap<>();
         fruits.put(123, "Banana");
