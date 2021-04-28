@@ -51,13 +51,13 @@ public class Main
         System.out.println(phones);
 
 
-/*
+
         //MyHashMap
-        MyHashMap <Integer, String> fruits = new MyHashMap<>();
-        fruits.put(123, "Banana");
-        fruits.put(23, "Grape");
-        System.out.println("Val at 123 "+fruits.get(123));
-        System.out.println("Val at 23 "+fruits.get(23));
-        System.out.println("Val at 2 "+fruits.get(2));*/
+        MyHash <Integer, String> car = new MyHash<>();
+        car.put(111, "Audi");
+        car.put(25, "BMW");
+        System.out.println("Num of car 111 "+car.get(111));
+        System.out.println("Num of car "+car.get(25));
+
     }
 }
