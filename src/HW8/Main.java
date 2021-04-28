@@ -57,7 +57,7 @@ public class Main
         car.put(111, "Audi");
         car.put(25, "BMW");
         System.out.println("Num of car 111 "+car.get(111));
-        System.out.println("Num of car "+car.get(25));
+        System.out.println("Num of car 25 "+car.get(25));
 
     }
 }
