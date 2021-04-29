@@ -5,18 +5,21 @@ public class Main
     public static void main(String[] args)
     {
         //MyArrayList
-
         MyArrayList<String> strings = new MyArrayList<>();
-        strings.add(1);
-        strings.add(2);
+        strings.add("first");
+        System.out.println(strings);
+        strings.add("2");
+        System.out.println(strings);
         strings.remove(1);
+        System.out.println(strings);
         strings.clear();
+        System.out.println(strings);
         strings.size();
+        System.out.println(strings);
         strings.get(2);
         System.out.println(strings);
 
         //MyLinkedList
-
         MyLinkedList <Integer> list = new <Integer> MyLinkedList();
         list.add(5);
         list.add(6);
@@ -36,7 +39,6 @@ public class Main
         System.out.println(cars);
 
         //MyQueue
-
         MyQueue<String> phones = new MyQueue<>();
         phones.add("IPhone");
         phones.add("Samsung");
@@ -44,13 +46,10 @@ public class Main
         phones.add("HTC");
         System.out.println(phones);
         System.out.println(phones.size());
-
         phones.remove(3);
         System.out.println(phones);
         phones.poll();
         System.out.println(phones);
-
-
 
         //MyHashMap
         MyHash <Integer, String> car = new MyHash<>();

@@ -11,18 +11,18 @@ public class MyArrayList <T> implements Methods <T>
     int point1 = 5;
 
     @Override
-    public void add(Object value)
+    public void add(T value)
     {
         if (point == array.length-1)
         {
-            resize(array.length);
+            resize(array.length*2);
             array[point++] = value;
         }
     }
 
     private void resize(int i)
     {
-        Object[] newArray = new Object[array.length];
+        Object[] newArray = new Object[i];
         System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
     }

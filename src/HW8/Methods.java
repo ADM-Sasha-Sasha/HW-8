@@ -2,7 +2,7 @@ package HW8;
 
 public interface Methods <T> {
 
-    void add(Object value); // добавляет элемент в конец
+    void add(T value); // добавляет элемент в конец
 
     void remove(int index); // удаляет элемент под индексом
 
