@@ -15,15 +15,15 @@ public class MyArrayList <T> implements Methods <T>
     {
         if (point == array.length-1)
         {
-            resize(array.length*2);
+            resize(array.length);
             array[point++] = value;
         }
     }
 
     private void resize(int i)
     {
-        Object[] newArray = new Object[i];
-        System.arraycopy(array, 0, newArray, 0, point);
+        Object[] newArray = new Object[array.length];
+        System.arraycopy(array, 0, newArray, 0, array.length);
         array = newArray;
     }
 

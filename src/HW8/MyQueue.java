@@ -34,14 +34,19 @@ public class MyQueue <T> implements QueueList
     }
 
     @Override
-    public Object remove(int index)
+    public void remove(int index)
     {
-        for (int i = index; i < size; i++)
-        {
-            queueArr[i] = queueArr[i+1];
-        }
-        queueArr[size--] = null;
-        return null;
+        Object [] newArr = new Object[queueArr.length];
+        System.arraycopy(queueArr, 0, newArr, 0, index);
+        System.arraycopy(queueArr, index + 1, newArr, index, queueArr.length-1-index);
+        queueArr = newArr;
+        size--;
+//        for (int i = index; i < size; i++)
+//        {
+//            queueArr[i] = queueArr[i+1];
+//        }
+//        queueArr[size--] = null;
+//        size-- ;
     }
 
     @Override
@@ -69,7 +74,12 @@ public class MyQueue <T> implements QueueList
     @Override
     public Object poll()
     {
-        return remove(0);
+        Object[] newArr = new Object[queueArr.length-1];
+        T startElement = (T) queueArr[0];
+        System.arraycopy(queueArr, 1, newArr, 0, queueArr.length-1);
+        queueArr = newArr;
+        size--;
+        return startElement;
     }
 
     @Override

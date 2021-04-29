@@ -7,12 +7,12 @@ public class Main
         //MyArrayList
 
         MyArrayList<String> strings = new MyArrayList<>();
-        strings.add("first");
-        strings.add("second");
-        //strings.remove(1);
-        //strings.clear();
-        //strings.size();
-        //strings.get(2);
+        strings.add(1);
+        strings.add(2);
+        strings.remove(1);
+        strings.clear();
+        strings.size();
+        strings.get(2);
         System.out.println(strings);
 
         //MyLinkedList

@@ -71,11 +71,12 @@ public class MyStack <T> implements StackList <T>
     @Override
     public T pop()
     {
-        if (isEmpty())
-        {
-            throw new EmptyStackException();
-        }
-        return (T) (stackArray[0] = null);
+        Object[] newArr = new Object[stackArray.length-1];
+        T startElement = (T) stackArray[0];
+        System.arraycopy(stackArray, 1, newArr, 0, stackArray.length-1);
+        stackArray = newArr;
+        size--;
+        return startElement;
     }
 
     @Override
