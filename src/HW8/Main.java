@@ -15,7 +15,7 @@ public class Main
         strings.clear();
         System.out.println(strings);
         strings.size();
-        System.out.println(strings);
+        System.out.println(10);
         strings.get(2);
         System.out.println(strings);
 
