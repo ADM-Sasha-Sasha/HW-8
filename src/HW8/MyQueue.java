@@ -84,6 +84,6 @@ public class MyQueue <T> implements QueueList
 
     @Override
     public String toString() {
-        return "MyQueue" + Arrays.toString(queueArr);
+        return Arrays.toString(queueArr);
     }
 }

@@ -81,6 +81,6 @@ public class MyStack <T> implements StackList <T>
 
     @Override
     public String toString() {
-        return "MyStack" + Arrays.toString(stackArray);
+        return Arrays.toString(stackArray);
     }
 }

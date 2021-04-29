@@ -202,6 +202,6 @@ public class MyHash<I extends Number, S> implements HashList
 
     @Override
     public String toString() {
-        return "MyHash" + Arrays.toString(newNode);
+        return Arrays.toString(newNode);
     }
 }
