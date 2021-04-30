@@ -7,6 +7,7 @@ public class MyStack <T> implements StackList <T>
 {
     private Object[] stackArray;
     private int size;
+    private int capacity = 10;
 
     public MyStack (int capacity)
     {
@@ -65,14 +66,14 @@ public class MyStack <T> implements StackList <T>
 //        {
 //            throw new EmptyStackException();
 //        }
-            return (T) stackArray[size];
+            return (T) stackArray[stackArray.length-1];
     }
 
     @Override
     public T pop()
     {
         Object[] newArr = new Object[stackArray.length-1];
-        T startElement = (T) stackArray[0];
+        T startElement = (T) stackArray[stackArray.length-1];
         System.arraycopy(stackArray, 1, newArr, 0, stackArray.length-1);
         stackArray = newArr;
         size--;
