@@ -28,7 +28,7 @@ public class Main
         System.out.println(list);
 
         //MyStack
-        MyStack<String> cars = new MyStack<>(10);
+        MyStack<String> cars = new MyStack<>();
         cars.push("AUDI");
         cars.push("Mercedes");
         cars.push("BMW");

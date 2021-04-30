@@ -6,13 +6,13 @@ import java.util.EmptyStackException;
 public class MyStack <T> implements StackList <T>
 {
     private Object[] stackArray;
-    private int size;
+    private int size = 0;
     private int capacity = 10;
 
-    public MyStack (int capacity)
+    public MyStack ()
     {
-        this.stackArray = new Object[capacity];
-        this.size = 0;
+        stackArray = new Object[capacity];
+        size = 0;
     }
     private boolean isEmpty()
     {
@@ -66,7 +66,7 @@ public class MyStack <T> implements StackList <T>
 //        {
 //            throw new EmptyStackException();
 //        }
-            return (T) stackArray[stackArray.length-1];
+            return (T) stackArray[size];
     }
 
     @Override
