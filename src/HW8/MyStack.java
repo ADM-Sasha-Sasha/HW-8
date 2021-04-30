@@ -73,7 +73,7 @@ public class MyStack <T> implements StackList <T>
     public T pop()
     {
         Object[] newArr = new Object[stackArray.length-1];
-        T startElement = (T) stackArray[stackArray.length-1];
+        T startElement = (T) stackArray[size];
         System.arraycopy(stackArray, 1, newArr, 0, stackArray.length-1);
         stackArray = newArr;
         size--;
