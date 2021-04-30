@@ -66,16 +66,16 @@ public class MyStack <T> implements StackList <T>
 //        {
 //            throw new EmptyStackException();
 //        }
-            return (T) stackArray[size];
+        return (T)stackArray[stackArray.length - 1];
     }
 
     @Override
     public T pop()
     {
-        Object[] newArr = new Object[stackArray.length-1];
-        T startElement = (T) stackArray[size];
-        System.arraycopy(stackArray, 1, newArr, 0, stackArray.length-1);
-        stackArray = newArr;
+        //Object[] newArr = new Object[stackArray.length-1];
+        T startElement = (T) stackArray[stackArray.length - 1];
+        //System.arraycopy(stackArray, 1, newArr, 0, stackArray.length-1);
+        stackArray = Arrays.copyOfRange(stackArray, 0, stackArray.length - 1);
         size--;
         return startElement;
     }
