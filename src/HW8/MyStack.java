@@ -61,11 +61,11 @@ public class MyStack <T> implements StackList <T>
     @Override
     public T peek()
     {
-        if (isEmpty())
-        {
-            throw new EmptyStackException();
-        }
-        return (T) stackArray[0];
+//        if (isEmpty())
+//        {
+//            throw new EmptyStackException();
+//        }
+            return (T) stackArray[size];
     }
 
     @Override

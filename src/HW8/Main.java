@@ -37,6 +37,10 @@ public class Main
         System.out.println(cars);
         cars.clear();
         System.out.println(cars);
+        cars.peek();
+        System.out.println(cars);
+        cars.pop();
+        System.out.println(cars);
 
         //MyQueue
         MyQueue<String> phones = new MyQueue<>();
